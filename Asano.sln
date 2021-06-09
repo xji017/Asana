@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asano.Api", "Asano.Api\Source\Asano.Api\Asano.Api.csproj", "{4CF35147-EA96-45EC-86A7-3890F576EC90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asano.Api.IntegrationTest", "Asano.Api\Tests\Asano.Api.IntegrationTest\Asano.Api.IntegrationTest.csproj", "{A3756B21-14C7-4DA6-AA40-A9962E7645A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CF35147-EA96-45EC-86A7-3890F576EC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CF35147-EA96-45EC-86A7-3890F576EC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CF35147-EA96-45EC-86A7-3890F576EC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CF35147-EA96-45EC-86A7-3890F576EC90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3756B21-14C7-4DA6-AA40-A9962E7645A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3756B21-14C7-4DA6-AA40-A9962E7645A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3756B21-14C7-4DA6-AA40-A9962E7645A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3756B21-14C7-4DA6-AA40-A9962E7645A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
