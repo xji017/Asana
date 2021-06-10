@@ -1,14 +1,8 @@
 namespace Asano.Api
 {
     using System;
-    using Boxed.Mapping;
-    using Asano.Api.DataLoaders;
-    using Asano.Api.Directives;
-    using Asano.Api.Mappers;
-    using Asano.Api.Models;
-    using Asano.Api.Repositories;
-    using Asano.Api.Services;
-    using Asano.Api.Types;
+    using Directives;
+    using Services;
     using HotChocolate.Execution.Configuration;
     using HotChocolate.Types;
     using Microsoft.Extensions.DependencyInjection;
@@ -24,17 +18,14 @@ namespace Asano.Api
     internal static class ProjectServiceCollectionExtensions
     {
         public static IServiceCollection AddProjectMappers(this IServiceCollection services) =>
-            services
-                .AddSingleton<IImmutableMapper<HumanInput, Human>, HumanInputToHumanMapper>();
+            services; //TODO: project mapper
 
         public static IServiceCollection AddProjectServices(this IServiceCollection services) =>
             services
                 .AddSingleton<IClockService, ClockService>();
 
         public static IServiceCollection AddProjectRepositories(this IServiceCollection services) =>
-            services
-                .AddSingleton<IDroidRepository, DroidRepository>()
-                .AddSingleton<IHumanRepository, HumanRepository>();
+            services; //TODO: add repository
 
         public static IRequestExecutorBuilder AddProjectScalarTypes(this IRequestExecutorBuilder builder) =>
             builder
@@ -49,19 +40,9 @@ namespace Asano.Api
                 .AddDirectiveType<SkipDirectiveType>();
 
         public static IRequestExecutorBuilder AddProjectDataLoaders(this IRequestExecutorBuilder builder) =>
-            builder
-                .AddDataLoader<IDroidDataLoader, DroidDataLoader>()
-                .AddDataLoader<IHumanDataLoader, HumanDataLoader>();
+            builder; //TODO: add dataloader if any
 
         public static IRequestExecutorBuilder AddProjectTypes(this IRequestExecutorBuilder builder) =>
-            builder
-                .SetSchema<MainSchema>()
-                .AddQueryType<QueryObject>()
-                .AddMutationType<MutationObject>()
-                .AddType<EpisodeEnumeration>()
-                .AddType<CharacterInterface>()
-                .AddType<DroidObject>()
-                .AddType<HumanObject>()
-                .AddType<HumanInputObject>();
+            builder; //TODO: add all graphql types
     }
 }
